@@ -1,3 +1,43 @@
 <h1>
-All articles at index
+Article listing page 
 </h1>
+
+<p>
+    <%= @articles %>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                Ttitle
+            </td>
+            <td>
+                 Description 
+            </td>
+            <td>
+                Actions 
+            </td>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <% @articles.each do |article| %>
+
+            <tr>
+                <td>
+                    <%= article.title %>
+                </td>
+                <td>
+                    <%= article.description %>
+                </td>
+                <td>
+                    Actions  
+                </td>
+            </tr>
+
+        <% end %>
+
+    </tbody>
+</table>
